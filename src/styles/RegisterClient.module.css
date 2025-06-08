@@ -1,0 +1,36 @@
+:root {
+  --bg-color: #0f1116;             /* fundo bem escuro */
+  --card-bg: #1b1e24;              /* fundo do card */
+  --primary: #3d5afe;              /* azul do botão principal */
+  --primary-hover: #536dfe;
+  --text: #ffffff;
+  --text-muted: #9ca0ab;
+  --border-radius: 12px;
+}
+
+.screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.card{
+    width: 100%;
+    max-width: 380px;
+    padding: 48px 32px 32px; 
+    background: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-muted);
+}
+.input{
+    width: 100%;
+}

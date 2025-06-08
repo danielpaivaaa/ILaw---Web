@@ -1,0 +1,127 @@
+/* Paleta e tokens simples */
+:root {
+  --bg-color: #0f1116;             /* fundo bem escuro */
+  --card-bg: #1b1e24;              /* fundo do card */
+  --primary: #3d5afe;              /* azul do botão principal */
+  --primary-hover: #536dfe;
+  --text: #ffffff;
+  --text-muted: #9ca0ab;
+  --border-radius: 12px;
+}
+
+/* container geral */
+.screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+
+}
+
+/* card central */
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding:  48px 32px 32px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* tipografia  */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-muted);
+}
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: green;
+  margin-bottom: 32px;
+}
+
+/* inputs */
+
+.input {
+  width: 100%;
+  height: 46px;
+  background: #262a33;
+  border: 1px solid #30343d;
+  border-radius: var(--border-radius);
+  padding: 12 16px;
+  color: var(--text);
+   margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+
+.input:placeholder {
+  color: #58606e; 
+}
+
+.forgot {
+  font-size: 0.77rem;
+  color: var(--primary);
+  text-align: right;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+/* botões */
+
+.btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.93rem;
+  font-weight: 600;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+/* principal */
+
+.btnPrimary {
+  background: var(--primary);
+  color: #fff;
+}
+.btnPrimary:hover {
+  background: var(--primary-hover);
+}
+
+
+/* alternativo */
+.btnAlt {
+  background: #fff;
+  color: #000;
+  margin-bottom: 1rem;
+  margin-top: 14px;
+}
+.btnAltFacebook {
+  background: #1877f2;
+  color: #fff;
+}
+
+/*rodapé do card */
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.link {
+  color: var(--primary);
+  margin-left: 4px;
+  cursor: pointer;
+  color: green;
+  cursor: pointer;
+}
