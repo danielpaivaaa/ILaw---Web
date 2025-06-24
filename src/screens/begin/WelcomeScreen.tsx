@@ -1,40 +1,41 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import styles from "../../styles/WelcomeScreen.module.css";
+import lawyerIcon from "../../assets/lawyericon.png";
+import clientIcon from "../../assets/clienticon.png";
+import PageWrapper from "../../components/PageWrapper";
+
 
 export default function WelcomeScreen() {
   const navigate = useNavigate();
 
   return (
-    <div style={styles.container}>
-      <h2>Bem-vindo ao iLaw</h2>
-      <p>Escolha como deseja acessar:</p>
-      <div style={styles.buttonGroup}>
-        <button onClick={() => navigate('/login-lawyer')} style={styles.button}>Sou Advogado</button>
-        <button onClick={() => navigate('/login-client')} style={styles.button}>Sou Cliente</button>
+    <PageWrapper>
+    <div className={styles.container}>
+      <div className={styles.leftPanel}>
+        <h1>iLaw</h1>
+        <p>Conectando você à justiça de forma simples e rápida.</p>
+        <p>Encontre o profissional ideal para sua necessidade jurídica!</p>
+      </div>
+
+      <div className={styles.rightPanel}>
+        <h1 className={styles.title}>
+          Bem vindo ao <span className={styles.ilaw}>iLaw</span>
+        </h1>
+        <p>Escolha como deseja continuar</p>
+
+        <div className={styles.buttons}>
+          <button className={styles.button} onClick={() => navigate("/login-Lawyer")}>
+            <img src={lawyerIcon} alt="Advogado" />
+            <span>Advogado</span>
+          </button>
+
+          <button className={styles.button} onClick={() => navigate("/login-client")}>
+            <img src={clientIcon} alt="Cliente" />
+            <span>Cliente</span>
+          </button>
+        </div>
       </div>
     </div>
+    </PageWrapper>
   );
 }
-
-const styles = {
-  container: {
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column' as const,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 20
-  },
-  buttonGroup: {
-    display: 'flex',
-    gap: 15
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: 16,
-    backgroundColor: '#004aad',
-    color: '#fff',
-    border: 'none',
-    borderRadius: 8,
-    cursor: 'pointer'
-  }
-};

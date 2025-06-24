@@ -1,8 +1,13 @@
-/* Garante que tudo ocupe a altura da tela */
 html, body, #root {
-  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh; /* Use vh para pegar a altura total da janela */
+  box-sizing: border-box;
+  overflow-x: hidden; /* só esconde o scroll lateral */
+}
+* {
+  box-sizing: inherit;
 }
 
 /* Variáveis globais e base de fontes */

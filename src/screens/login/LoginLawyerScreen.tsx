@@ -1,72 +1,32 @@
-import { useState} from "react";
-import type { FormEvent} from "react";
-import { useNavigate } from "react-router-dom";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
-import styles from "../../styles/LoginClient.module.css";
+import { useNavigate } from 'react-router-dom';
+import '../../styles/LoginLawyer.css';
+import { FiArrowLeft } from 'react-icons/fi'; // ícone da seta
 
-
-export default function LoginClientScreen() {
+export default function LoginLawyer() {
     const navigate = useNavigate();
+    const handleGoBack = () => {
+      navigate(-1);
+    }
+  return (
+    <div className="login-container">
+      <FiArrowLeft className="back-icon"  onClick={handleGoBack}/>
+      <h1 className="login-title">Advogado</h1>
+      <p className="login-subtitle">Efetue seu login</p>
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+        <div className="input-group">
+          <input type="text" id="email" placeholder=" " required />   
+          <label htmlFor="email">E-mail ou usuário</label>    
+          </div>
 
-    const handleSubmit = (e: FormEvent) => {
-        e.preventDefault();
+          <div className="input-group">
+            <input type="password" id="senha" placeholder=" " required />
+            <label htmlFor="senha">Senha</label>
 
-        if(!username || !password) {
-            alert("preencha e-mail e senha");
-            return;
-        }
-
-        console.log({username, password});
-        navigate("/dashboard");
-    };
-    const goToSignUp = () => navigate ("/register/client");
-
-    const forgotPassword = () => navigate ("/forgotPassword")
-
-    return (
-        <div className={styles.screen}>
-            <form onSubmit={handleSubmit} className={styles.card}>
-                <h1 className={styles.title}>faça seu login de</h1>
-                <h1 className={styles.subtitle}>Advogado</h1>
-
-                <input 
-                type="email"
-                placeholder="Username"
-                className={styles.input}
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                />
-
-                <input 
-                type="password"
-                placeholder="Password"
-                className={styles.input}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                />
-
-                <span onClick={forgotPassword} className={styles.forgot}>
-                    Forgot Password?
-                </span>
-
-                <button type="button" className={`${styles.btn} ${styles.btnAlt}`}>
-                    <FaGoogle size={18} /> Sign In with google
-                </button>
-                <button type="button" className={`${styles.btn} ${styles.btnAltFacebook}`}>
-                    <FaFacebook size={18} /> Sign In with Facebook
-                </button>
-
-
-                <div className={styles.footer}>
-                    não possui uma conta?
-                    <span onClick={goToSignUp} className={styles.link}>Cadastre-se
-                    </span>
-                </div>
-            </form>
-        </div>
-    );
-
+            <div className="login-footer">
+              <button className="login-button" onClick={() => navigate("/home-lawyer")}>Acessar</button>
+              <p className="textt">Não possui conta?<span className="cadastre-link" onClick={() => navigate("/register-lawyer")}> Cadastre-se</span></p>
+            </div>
+          </div>
+      </div>
+  );
 }

@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  color: #111;
+  background: #fff;
+}
+
+.botoes {
+  display: flex;
+  gap: 8px;
+}
+
+.aceitar {
+  background-color: #012060; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.aceitar:hover {
+  background-color: #2563eb;
+}
+
+.recusar {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.recusar:hover {
+  background-color: #f2f2f2;
+}

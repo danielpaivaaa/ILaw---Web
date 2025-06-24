@@ -13,31 +13,31 @@ export default function RegisterTwoLawyer () {
         <div className={styles.screenContainer}>
             <div className={styles.leftPanel}>
                 <FiArrowLeft className={styles.arrow} onClick={handleGoBack} />
-                <h1 className={styles.title}>Contratante, conclua seu cadastro.</h1>
-                <p className={styles.sub}>Finalize com suas informações.</p>
+                <h1 className={styles.title}>Advogado, conclua seu cadastro.</h1>
+                <p className={styles.sub}>Adicione suas informações finais.</p>
         </div>
             <div className={styles.rightPanel}>
-                <h1 className={styles.rightTitle}>Contratante</h1>
-                <p className={styles.subRight}>Cadastro</p>
+                <h1 className={styles.rightTitle}>Advogado</h1>
+                <p className={styles.subRight}>Conclua seu cadastro</p>
 
                 <form className={styles.form}>
                     <div className={styles.inputGroup}>
-                        <input type="text" id="nome" placeholder=" " required />
-                        <label htmlFor="nome">Nome</label>
+                        <input type="text" id="endereço" placeholder=" " required />
+                        <label htmlFor="endereco">Endereço</label>
                     </div>
                     <div className={styles.inputGroup}>
-                        <input type="email" id="nome" placeholder=" " required />
-                        <label htmlFor="email">E-mail</label>
-                    </div>
-                    <div className={styles.inputGroup}>
-                        <input type="password" id="senha" placeholder=" " required />
-                        <label htmlFor="senha">Senha</label>
-                    </div>
-                    <div className={styles.inputGroup}>
-                        <input type="text" id="telefone" placeholder=" " required />
+                        <input type="tel" id="telfone" placeholder=" " required />
                         <label htmlFor="telefone">Telefone</label>
                     </div>
-                    <button type="submit" className={styles.submitButton} onClick={() => navigate("/home-client")}>
+                    <div className={styles.inputGroup}>
+                        <input type="text" id="endereçoComercial" placeholder=" " required />
+                        <label htmlFor="telefoneComercial">Telefone Comercial</label>
+                    </div>
+                    <div className={styles.inputGroup}>
+                        <input type="text" id="oab" placeholder=" " required />
+                        <label htmlFor="oab">OAB</label>
+                    </div>
+                    <button type="submit" className={styles.submitButton} onClick={() => navigate("/home-lawyer")}>
                         Cadastrar
                     </button>
                 </form>

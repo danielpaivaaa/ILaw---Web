@@ -1,0 +1,17 @@
+.topbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 24px;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}

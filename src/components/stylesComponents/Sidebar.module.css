@@ -1,0 +1,49 @@
+.sidebar {
+  width: 240px;
+  background-color: #f8f9fa;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-right: 1px solid #eee;
+  background: #fff;
+  color: #111;
+}
+
+.logo {
+  font-size: 32px;
+  text-align: center;
+}
+.logo2{
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  color: #333;
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav li:hover {
+  background-color: #012060;
+  color: #fff;
+}
+
+.active {
+  color:#333 ;
+  background-color: #dbeafe;
+  font-weight: bold;
+}
